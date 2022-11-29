@@ -51,19 +51,24 @@ const nuevoModulo = 21 % 5 === 1;
 function devolverString(str) {
     // "Return" la string provista: str
     // Tu código:
-    document.write(`Hola ${str}`)
+    //document.write(`Hola ${str}`)
+    //document.write(str)
+    console.log(str + "</br>")
 
 }
 //document.write(devolverString(nuevaString))
+devolverString(nuevaString)
 
-function suma(x, y) {
-    // "x" e "y" son números
-    // Suma "x" e "y" juntos y devuelve el valor
-    // Tu código:
-    return x + y
+// function suma(x, y) {
+//     // "x" e "y" son números
+//     // Suma "x" e "y" juntos y devuelve el valor
+//     // Tu código:
+//     return x + y
 
-}
-//document.write(suma(2, 3))
+// }
+
+const suma = (x, y) => { console.log(x + y) }
+suma(2, 3)
 
 function resta(x, y) {
     // Resta "x" de "y" y devuelve el valor
@@ -93,31 +98,34 @@ function sonIguales(x, y) {
     // Devuelve "true" si "x" e "y" son iguales
     // De lo contrario, devuelve "false"
     // Tu código:utilizar if y else
-    if (x === y) {
-        return true
-    } else {
-        return false
-    }
+    console.log((x === y))
+        // if (x === y) {
+        //     return true
+        // } else {
+        //     return false
+        // }
 
 
 }
-// document.write(sonIguales(2, 2))
+sonIguales(2, 3)
+
 
 function tienenMismaLongitud(str1, str2) {
     // Devuelve "true" si las dos strings tienen la misma longitud
     // De lo contrario, devuelve "false"
     // Tu código:
-    let a = str1.lenght
-    let b = str2.lenght
-    if (a == b) {
-        return true
-    } else {
-        return false
-    }
+    console.log(str1.lenght === str2.lenght)
+        // let a = str1.lenght
+        // let b = str2.lenght
+        // if (a == b) {
+        //     return true
+        // } else {
+        //     return false
+        // }
 
 }
-
-//document.write(tienenMismaLongitud("Maria", "Luz"))
+tienenMismaLongitud("Maria", "Luz")
+    //document.write(tienenMismaLongitud("Maria", "Luz"))
 
 function menosQueNoventa(num) {
     // Devuelve "true" si el argumento de la función "num" es menor que noventa
@@ -151,21 +159,25 @@ function obtenerResto(x, y) {
     return x % y
 
 }
-//document.write(obtenerResto(9, 5))
+console.log(obtenerResto(9, 5))
 
-function esPar(num) {
-    // Devuelve "true" si "num" es par
-    // De lo contrario, devuelve "false"
-    // Tu código:
-    if (num % 2 == 0) {
-        return true
-    } else {
-        return false
-    }
+// function esPar(num) {
+//     // Devuelve "true" si "num" es par
+//     // De lo contrario, devuelve "false"
+//     // Tu código:
+//     if (num % 2 == 0) {
+//         return true
+//     } else {
+//         return false
+//     }
 
 
+// }
+
+const esPar = num => {
+    console.log(num % 2 === 0)
 }
-//document.write(esPar(15))
+esPar(14)
 
 function esImpar(num) {
     // Devuelve "true" si "num" es impar
@@ -178,7 +190,7 @@ function esImpar(num) {
     }
 
 }
-//document.write(esImpar(150))
+console.log(esImpar(15))
 
 function elevarAlCuadrado(num) {
     // Devuelve el valor de "num" elevado al cuadrado
@@ -232,44 +244,55 @@ function numeroRandom() {
 }
 //document.write(numeroRandom())
 
-function esPositivo(numero) {
-    //La función va a recibir un entero. Devuelve como resultado una cadena de texto que indica si el número es positivo o negativo. 
-    //Si el número es positivo, devolver ---> "Es positivo"
-    //Si el número es negativo, devolver ---> "Es negativo"
-    //Si el número es 0, devuelve false
+// function esPositivo(numero) {
+//     //La función va a recibir un entero. Devuelve como resultado una cadena de texto que indica si el número es positivo o negativo. 
+//     //Si el número es positivo, devolver ---> "Es positivo"
+//     //Si el número es negativo, devolver ---> "Es negativo"
+//     //Si el número es 0, devuelve false
+//     if (numero > 0) {
+//         let result = document.write("Es positivo")
+//     } else if (numero < 0) {
+//         let result = document.write("Es negativo")
+//     } else {
+//         return false
+//     }
+//     return result
+
+// }
+
+const esPositivo = (numero) => {
     if (numero > 0) {
-        let result = document.write("Es positivo")
+        console.log("Es positivo")
     } else if (numero < 0) {
-        let result = document.write("Es negativo")
+        console.log("Es negativo")
     } else {
-        return false
+        console.log(false)
     }
-    return result
-
 }
-//document.write(esPositivo(0)) //Es positivoundefined
+esPositivo(3)
 
-function agregarSimboloExclamacion(str) {
-    // Agrega un símbolo de exclamación al final de la string "str" y devuelve una nueva string
-    // Ejemplo: "hello world" pasaría a ser "hello world!"
-    // Tu código:
-    let frase = str + "!"
-    return frase
+// function agregarSimboloExclamacion(str) {
+//     // Agrega un símbolo de exclamación al final de la string "str" y devuelve una nueva string
+//     // Ejemplo: "hello world" pasaría a ser "hello world!"
+//     // Tu código:
+//     let frase = str + "!"
+//     return frase
+// }
+const agregarSimboloExclamacion = str => document.write(`${str} !` + "</br>")
+agregarSimboloExclamacion("hola mundo")
+
+// function combinarNombres(nombre, apellido) {
+//     // Devuelve "nombre" y "apellido" combinados en una string y separados por un espacio.
+//     // Ejemplo: "Soy", "Bruce Wayne" -> "Bruce Wayne"
+//     // Tu código:
+//     let nomyApe = `${nombre} ${apellido}`
+//     return nomyApe
 
 
-}
-//document.write(agregarSimboloExclamacion("Hola mundo"))
-
-function combinarNombres(nombre, apellido) {
-    // Devuelve "nombre" y "apellido" combinados en una string y separados por un espacio.
-    // Ejemplo: "Soy", "Bruce Wayne" -> "Bruce Wayne"
-    // Tu código:
-    let nomyApe = `${nombre} ${apellido}`
-    return nomyApe
-
-
-}
-//document.write(combinarNombres("Maria", "Luz"))
+// }
+const combinarNombres = (nombre, apellido) => document.write(`${nombre} ${apellido}` + "</br>")
+    //document.write(combinarNombres("Maria", "Luz"))
+combinarNombres("Maria Luz", "Britos")
 
 function obtenerSaludo(nombre) {
     // Toma la string "nombre" y concatena otras string en la cadena para que tome la siguiente forma:
@@ -279,7 +302,7 @@ function obtenerSaludo(nombre) {
     return saludo
 
 }
-//document.write(obtenerSaludo("Luz"))
+console.log(obtenerSaludo("Luz"))
 
 function obtenerAreaRectangulo(alto, ancho) {
     // Retornar el area de un cuadrado teniendo su altura y ancho
@@ -328,16 +351,16 @@ function esVocal(letra) {
     //si ingresa una consonante muestre en pantalla dato incorrecto
     //Escribe tu código aquí
     if (letra.lenght > 2) {
-        document.write("Dato incorrecto")
+        alert("Dato incorrecto, ingresaste mas de un caracter")
     } else {
         if (letra === 'a' || letra == 'e' || letra == 'i' || letra == 'o' || letra == 'u') {
-            document.write("Es vocal")
+            alert(`La letra ${letra} es vocal`)
 
         } else {
-            document.write("Dato incorrecto")
+            alert("Dato incorrecto")
         }
     }
 
 }
 
-//esVocal(prompt("Ingrese una letra"))
+esVocal(prompt("Ingrese una letra").toLowerCase())
